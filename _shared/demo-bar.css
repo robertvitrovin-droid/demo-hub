@@ -1,0 +1,8 @@
+/* Reusable Demo hub bar: <link rel="stylesheet" href="/_shared/demo-bar.css"><script src="/_shared/demo-bar.js" defer></script> */
+:root{--demo-bar-h:36px}
+html body{padding-top:var(--demo-bar-h)!important}
+.demo-bar{position:fixed;top:0;left:0;right:0;height:var(--demo-bar-h);z-index:2147483000;display:flex;align-items:center;gap:16px;padding:0 16px;background:rgba(22,26,34,.92);backdrop-filter:blur(6px);color:#c9ced8;font:500 11px/1 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.14em;text-transform:uppercase;box-sizing:border-box}
+.demo-bar a{color:#fff;text-decoration:none;white-space:nowrap}
+.demo-bar a:hover{text-decoration:underline}
+.demo-bar span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-left:auto}
+@media (max-width:600px){.demo-bar .en{display:none}.demo-bar{letter-spacing:.08em;gap:10px;padding:0 12px}}
