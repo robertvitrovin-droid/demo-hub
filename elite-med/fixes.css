@@ -1,0 +1,34 @@
+/* Responsive overrides (2026-10-26) */
+html,body{overflow-x:hidden}
+/* desktop landing: fluid */
+body.desktop{width:auto;max-width:100%}
+.desktop .container{width:min(1200px,calc(100% - 48px))}
+.desktop .h1{font-size:clamp(38px,4.4vw,64px);line-height:1.12}
+.desktop .h2{font-size:clamp(30px,3.1vw,44px);line-height:1.18}
+.desktop .section,.desktop .final{padding:clamp(64px,8vw,120px) 0}
+.desktop .hero{padding:clamp(40px,5vw,96px) 0 clamp(56px,7vw,120px)}
+.desktop .hero-grid,.desktop .about-grid,.desktop .faq-grid,.desktop .final-grid{gap:clamp(32px,4.5vw,72px)}
+.desktop .hero-copy{width:auto;flex:1 1 46%;min-width:0}
+.desktop .hero-media{width:auto;flex:1 1 50%;min-width:0;height:clamp(380px,42vw,600px)}
+.desktop .hero-media .photo{width:100%;height:100%}
+.desktop .float-1{left:-16px}.desktop .float-2{right:-8px}
+.desktop .about-left,.desktop .about-right{width:auto;flex:1 1 0;min-width:0}
+.desktop .faq-head{width:clamp(260px,30%,384px)}
+.desktop .callback{width:clamp(320px,36%,440px)}
+.desktop .final-photo{width:50%}
+.desktop .services-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.desktop .doctors-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.desktop .offer-grid{flex-wrap:wrap}.desktop .offer-main{min-width:0;padding:clamp(32px,4vw,56px);gap:clamp(24px,3vw,48px)}
+.desktop .offer-side{width:clamp(220px,24vw,300px)}
+.desktop .footer-brand{width:clamp(220px,24vw,300px)}
+.desktop .footer-cols{gap:24px;flex-wrap:wrap}
+.desktop .header-inner{gap:16px}.desktop .nav{gap:clamp(14px,2vw,36px)}
+.desktop img{max-width:100%}
+@media (max-width:1200px){.desktop .offer-alt{width:100%}.desktop .nav{font-size:14px}}
+/* mobile landing */
+body.mobile{width:auto;max-width:480px;margin:0 auto}
+.mobile .container{width:100%}
+.m-hero-img{height:150px;border-radius:20px;overflow:hidden;margin:16px 20px 0}
+.m-hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
+.desktop .nav a{white-space:nowrap}
+@media (max-width:1240px){.desktop .header-inner [href^="tel"],.desktop .header-phone{display:none}.desktop .float-2{right:12px}}

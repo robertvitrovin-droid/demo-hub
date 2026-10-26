@@ -1,0 +1,10 @@
+body#styles-components{width:auto;padding:clamp(12px,2vw,32px)}
+.sc-sec{padding:clamp(16px,2vw,28px);margin-bottom:16px;gap:14px;border-radius:16px}
+.sc-sec h2{font-size:20px;margin:0}
+.sc-row{gap:16px}
+#color-styles .sc-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
+.swatch{width:auto;font-size:12px}.chip{height:48px;border-radius:10px}
+.type-row{flex-wrap:wrap;gap:4px 16px;padding-bottom:8px}
+.type-row .sc-cap{width:220px!important}
+.type-row span:last-child{font-size:clamp(14px,.6em + 1vw,64px)}
+.sc-cell[style*="width:520px"],.sc-cell[style*="width:320px"]{width:min(100%,420px)!important}
