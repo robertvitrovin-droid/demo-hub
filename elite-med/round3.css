@@ -1,0 +1,42 @@
+/* round 3: interactions, real form, responsive header */
+html{scroll-behavior:smooth}
+section[id],footer[id]{scroll-margin-top:calc(var(--demo-bar-h,36px) + 12px)}
+.hero-usp{font-size:17px;line-height:27px;color:var(--text-2);margin:14px 0 0;max-width:560px}
+.hero-usp strong{color:var(--text);font-weight:600}
+.sample-tag{align-self:flex-start;display:inline-block;font:600 11px/1 Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--text-2);background:var(--bg-soft,#eef5f4);border:1px dashed #b9cfcd;border-radius:999px;padding:5px 9px;margin-bottom:10px}
+.review-card{position:relative}
+/* form */
+.callback{max-width:100%;box-sizing:border-box;min-width:0}
+.callback .input input.field,.callback .input select.field{width:100%;box-sizing:border-box;font:inherit;font-size:16px;color:var(--text);outline:none;-webkit-appearance:none;appearance:none}
+.callback select.field{background:#fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%235b6475" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>') no-repeat right 14px center/18px;padding-right:40px}
+.callback .input .field:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(14,124,123,.15)}
+.callback .input .field::placeholder{color:var(--disabled-text,#9aa1ad)}
+.callback button.btn{border:0;cursor:pointer;font:inherit;font-weight:600;width:100%;justify-content:center}
+.callback.is-sent .input,.callback.is-sent button{display:none}
+.cb-success{display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:14px;background:#e7f5f3;border:1px solid #bfe0de;color:var(--text)}
+.cb-success[hidden]{display:none}.cb-success strong{color:var(--primary)}.cb-success small{color:var(--text-2);font-size:13px}
+/* FAQ */
+.faq-a[hidden]{display:none}.faq-q:focus-visible{outline:2px solid var(--primary);outline-offset:2px;border-radius:12px}
+/* menu */
+.r3-menu{position:absolute;left:0;right:0;top:100%;z-index:50;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 12px 24px rgba(16,40,40,.08);display:flex;flex-direction:column;padding:8px 20px 16px}
+.r3-menu[hidden]{display:none}
+.r3-menu a{padding:14px 4px;border-bottom:1px solid var(--border);color:var(--text);text-decoration:none;font-weight:600}
+.r3-menu a:last-child{border-bottom:0;color:var(--primary)}
+.site-header{position:relative}
+.menu-btn{cursor:pointer}.menu-btn.is-open{border-color:var(--primary);color:var(--primary)}
+.r3-menu-btn{display:none;background:#fff;color:var(--text);width:44px;height:44px;border-radius:12px;border:1px solid var(--border);align-items:center;justify-content:center;flex:none}
+.r3-menu-btn svg{width:22px;height:22px}
+/* desktop page responsiveness */
+.desktop .header-inner{min-width:0;flex-wrap:nowrap}
+.desktop .header-actions{flex:none;min-width:0}
+.desktop .btn{white-space:nowrap}
+@media (max-width:1100px){.desktop .nav{gap:14px;font-size:14px}.desktop #header-cta{padding-left:16px;padding-right:16px}}
+@media (max-width:960px){.desktop .nav{display:none}.desktop .r3-menu-btn{display:flex}.desktop .header-actions{margin-left:auto}
+.desktop .hero-grid,.desktop .about-grid,.desktop .faq-grid,.desktop .final-grid,.desktop .offer-grid{flex-direction:column;align-items:stretch}
+.desktop .hero-media{flex:none;width:100%;height:420px}.desktop .faq-head,.desktop .callback,.desktop .offer-side,.desktop .footer-brand{width:100%}
+.desktop .final-photo{display:none}.desktop .reviews-grid{grid-template-columns:1fr 1fr}.desktop .doctors-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.desktop #header-cta{display:none}.desktop .services-grid,.desktop .reviews-grid,.desktop .doctors-grid{grid-template-columns:1fr}}
+/* decorative photo must never block the form */
+.final-photo{pointer-events:none;z-index:0}.final .container,.final-grid{position:relative;z-index:1}
+@media (max-width:960px){.desktop .offer-main{flex-direction:column;align-items:stretch;width:100%;box-sizing:border-box}.desktop .offer-side{width:100%}
+.desktop .footer-top{flex-direction:column}.desktop .footer-cols{flex-wrap:wrap;min-width:0}.desktop .footer-col{min-width:0;flex:1 1 180px}}
