@@ -10,35 +10,63 @@
 body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#f6f7f9;color:#161a22}
 a{color:inherit}
 .topbar{border-bottom:1px solid #e6e9ef;background:#fff}
-.topbar-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.back{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:#3a4354;text-decoration:none;border-radius:8px;padding:6px 8px;margin:-6px -8px}
-.back:hover,.back:focus-visible{background:#f0f2f5;color:#161a22;outline:2px solid #2f6f68;outline-offset:2px}
+.topbar-inner{
+  max-width:1080px;margin:0 auto;padding:16px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.back{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:16px;font-weight:600;line-height:1.2;color:#161a22;
+  text-decoration:none;border-radius:10px;padding:8px 12px;margin:-8px -12px;
+  transition:background .15s,color .15s;
+}
+.back:hover{background:#eef1f4;color:#0f131a}
+.back:focus-visible{outline:2px solid #2f6f68;outline-offset:2px}
 .back:focus:not(:focus-visible){outline:none}
-.top-k{letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:#7a8191}
-header{max-width:1080px;margin:0 auto;padding:56px 24px 40px}
+.top-k{letter-spacing:.14em;text-transform:uppercase;font-size:12px;font-weight:600;color:#7a8191}
+header{max-width:1080px;margin:0 auto;padding:48px 24px 36px}
 .k{letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:#7a8191}
 h1{font-size:44px;margin:10px 0 14px;letter-spacing:-.02em}
 header p{color:#5b6475;max-width:600px;line-height:1.6;font-size:17px;margin:0}
-main{max-width:1080px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
-.card{background:#fff;border:2px solid #d9dde4;border-radius:18px;min-height:240px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s}
-a.card:hover,a.card:focus-visible{border-color:#2f6f68;box-shadow:0 8px 24px rgba(22,26,34,.08);outline:none}
-.card-soon{border-style:dashed}
-.thumb{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#eef0f3;border:0}
-.thumb-ph{display:block;width:100%;aspect-ratio:16/9;background:linear-gradient(180deg,#f0f2f5,#e8ebf0);border-bottom:1px solid #e6e9ef}
-.thumb-logo{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/9;background:#12181c;border:0;padding:0;overflow:hidden}
-.thumb-logo img{width:42%;max-width:160px;height:auto;border-radius:18%}
-.body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
-.badge{align-self:flex-start;font-size:12px;padding:4px 10px;border-radius:999px;background:#f0f2f5;color:#5b6475}
-.card h2{font-size:20px;margin:0}
+main{
+  max-width:1080px;margin:0 auto;padding:0 24px 80px;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;
+  align-items:stretch;
+}
+.card{
+  background:#fff;border:1px solid #dde1e8;border-radius:18px;
+  overflow:hidden;display:flex;flex-direction:column;
+  text-decoration:none;color:inherit;min-width:0;height:100%;
+  box-shadow:0 1px 2px rgba(22,26,34,.04);
+  transition:border-color .15s,box-shadow .15s,transform .15s;
+}
+a.card:hover,a.card:focus-visible{
+  border-color:#2f6f68;box-shadow:0 10px 28px rgba(22,26,34,.10);
+  transform:translateY(-1px);outline:none;
+}
+.card-static:hover{border-color:#c9ced8;box-shadow:0 6px 18px rgba(22,26,34,.06)}
+.preview{
+  display:block;width:100%;aspect-ratio:16/10;height:auto;
+  object-fit:cover;object-position:top center;
+  background:#e8ebf0;border:0;flex-shrink:0;
+}
+.body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.badge{
+  align-self:flex-start;font-size:12px;padding:4px 10px;border-radius:999px;
+  background:#f0f2f5;color:#5b6475;font-weight:500;
+}
+.card h2{font-size:18px;margin:0;line-height:1.35;letter-spacing:-.01em}
 .card p{margin:0;color:#7a8191;font-size:14px;line-height:1.5}
 footer{text-align:center;color:#9aa1af;font-size:13px;padding:0 24px 48px;line-height:1.6}
 footer a{color:#5b6475;text-decoration:underline;text-underline-offset:2px}
 footer a:hover,footer a:focus-visible{color:#161a22}
-@media (max-width:640px){
-  h1{font-size:32px}
+@media (max-width:900px){
+  main{grid-template-columns:1fr;gap:18px}
+  h1{font-size:34px}
   header{padding:36px 20px 28px}
-  main{padding:0 20px 56px;gap:16px}
-  .topbar-inner{padding:12px 20px}
+  main{padding:0 20px 56px}
+  .topbar-inner{padding:14px 20px}
+  .back{font-size:15px}
 }
 </style>
 </head>
@@ -56,25 +84,23 @@ footer a:hover,footer a:focus-visible{color:#161a22}
 </header>
 <main>
   <a class="card" href="/elite-med/">
-    <img class="thumb" src="/img/elite-med-hero.webp" width="960" height="540" alt="Elite Med Medical Center homepage hero: Healthcare for Your Whole Family, doctor with a young patient, Book an Appointment CTA">
+    <img class="preview" src="/img/elite-med-hero.webp" width="1280" height="800" alt="Elite Med Medical Center desktop hero: navigation, Healthcare for Your Whole Family headline, and doctor with a young patient">
     <div class="body">
       <span class="badge">Demo concept · Fictional clinic</span>
       <h2>Elite Med — clinic landing page</h2>
       <p>Desktop 1920, mobile 390, 2 banners.</p>
     </div>
   </a>
-  <div class="card card-soon" aria-label="Dispatcher Demo — coming soon">
-    <div class="thumb-logo">
-      <img src="/img/dispatcher-icon-192.png" width="192" height="192" alt="Ramelia Dispatcher logo">
-    </div>
+  <div class="card card-static" aria-label="Dispatcher Demo — coming soon">
+    <img class="preview" src="/img/dispatcher-preview.webp" width="1280" height="800" alt="Ramelia Dispatcher logo">
     <div class="body">
       <span class="badge">Coming soon</span>
       <h2>Dispatcher Demo — coming soon</h2>
       <p>dispatcher.demo.ramelia.agency</p>
     </div>
   </div>
-  <div class="card card-soon" aria-label="More projects coming soon">
-    <img class="thumb" src="/img/coming-soon-placeholder.webp" width="960" height="540" alt="">
+  <div class="card card-static" aria-label="More projects coming soon">
+    <img class="preview" src="/img/coming-soon-placeholder.webp" width="1280" height="800" alt="">
     <div class="body">
       <span class="badge">Coming soon</span>
       <h2>More projects coming soon</h2>
